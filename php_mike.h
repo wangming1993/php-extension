@@ -5,6 +5,7 @@ PHP_MINIT_FUNCTION(mike);
 PHP_METHOD(myclass, public_method);
 PHP_METHOD(myclass, static_method);
 PHP_FUNCTION(mike);
+PHP_MINFO_FUNCTION(mike);
 /*
 PHP_FUNCTION(mike_age);
 PHP_FUNCTION(mike_name);

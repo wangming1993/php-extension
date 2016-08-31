@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-files=`ls -l | grep -v -E "(\.c$|\.h$|config.m4|install\.sh|clear\.sh)"`
+files=`ls -l | grep -v -E "(\.c$|\.h$|config.m4|install\.sh|clear\.sh|README\.md)"`
 
 for file in $files:
 do

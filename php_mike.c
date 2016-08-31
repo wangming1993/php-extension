@@ -31,7 +31,7 @@ zend_module_entry mike_module_entry = {
     NULL, /* MSHUTDOWN */
     NULL, /* RINIT */
     NULL, /* RSHUTDOWN */
-    NULL, /* MINFO */
+    PHP_MINFO(mike), /* MINFO */
     PHP_MIKE_VERSION,
     STANDARD_MODULE_PROPERTIES
 };
@@ -40,6 +40,13 @@ ZEND_GET_MODULE(mike);
 
 PHP_FUNCTION(mike) {
     php_printf("This is mike's first PHP extension! \n");
+}
+
+PHP_MINFO_FUNCTION(mike)
+{
+    php_info_print_table_start();
+    php_info_print_table_header(2, "Version", PHP_MIKE_VERSION);
+    php_info_print_table_end();
 }
 /*
 PHP_FUNCTION(mike_age) {
